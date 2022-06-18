@@ -1,3 +1,9 @@
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>    
 <?php
     require_once("Config/config.php");
 
@@ -24,30 +30,7 @@
         }
     }
 
-    spl_autoload_register(function($class){
-        // Libraries/Core/home.php
-        if(file_exists(LIBS.'Core/'.$class.".php")){
-            require_once(LIBS.'Core/'.$class.".php");
-        }
-    });
+   require_once("Libraries/Core/Autoload.php");
 
-    $controllerFile = "Controllers/".$controller.".php";
-    if(file_exists($controllerFile)){
-        require_once($controllerFile);
-        $controller = new $controller();
-        if(method_exists($controller, $method)){
-            $controller->{$method}($params);
-        }else {
-            echo "No existe el metodo";
-        }
-    } else {
-        echo "No existe controlador";
-    }
-
-    // echo"<br>";
-    // echo "Controlador: ".$controller;
-    // echo"<br>";
-    // echo "Metodo: ".$method;
-    // echo"<br>";
-    // echo "Parametros: ".$params;
+   require_once("Libraries/Core/Load.php");
 ?>
