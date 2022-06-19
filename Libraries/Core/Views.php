@@ -1,12 +1,12 @@
 <?php
     class Views{
 
-        function getView($controller,$view){
+        function getView($controller,$view,$data=""){
             $controller = get_class($controller);
             if($controller == "Home"){
-                $view = VIEWS.$view.".php"; //creando  ruta ala vista home
+                $view = "Views/".$view.".php"; //creando  ruta ala vista home
             } else {
-                $view = VIEWS.$controller."/".$view.".php";
+                $view = "Views/".$controller."/".$view.".php";
             }
             // echo $view;
             require_once($view);
