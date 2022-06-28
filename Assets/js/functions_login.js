@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				request.send(formData);
 				request.onreadystatechange = function(){
 					if(request.readyState != 4) return;
-					if(request.status !== 200){
+					if(request.status == 200){
 						var objData = JSON.parse(request.responseText);
 						if(objData.status)
 						{
