@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pagina en construcción perdone las molestias</title>
+  <link rel="shortcut icon" href="<?= media();?>/images/favicon.png">
+  <title>Pagina de inicio</title>
 </head>
 <body>
-  
+
 </body>
 </html>
