@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     var objData = JSON.parse(request.responseText);
                     if(objData.status)
                     {
+                    // JQUERY DEVUELVE AL FORMULARIO
                         $('#modalFormUsuario').modal("hide");
                         formUsuario.reset();
                         swal("Usuarios", objData.msg ,"success");

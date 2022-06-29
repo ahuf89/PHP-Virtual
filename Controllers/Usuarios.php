@@ -89,6 +89,7 @@
 		{
 			$arrData = $this->model->selectUsuarios();
 			for ($i=0; $i < count($arrData); $i++) {
+				// BOTONES OPCIONES DE USUARIO
 				$btnView = '';
 				$btnEdit = '';
 				$btnDelete = '';

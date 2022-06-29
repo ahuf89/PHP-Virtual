@@ -33,6 +33,8 @@
 			$this->intStatus = $status;
 			$return = 0;
 
+			// consulta si el usuario ya existe
+
 			$sql = "SELECT * FROM persona WHERE 
 					email_user = '{$this->strEmail}' or identificacion = '{$this->strIdentificacion}' ";
 			$request = $this->select_all($sql);
